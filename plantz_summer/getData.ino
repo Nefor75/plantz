@@ -5,6 +5,7 @@ void connekt(){
     int humidityOut = dhtout.readHumidity();
     int foto = analogRead(PHOTO_SENSOR);
     String light = fotoCheck(foto);
+    String wifi_ip_to_string = WiFi.localIP().toString();//************************************
     int readFunExtract = digitalRead(funExtract);
     int readFunIn = digitalRead(funIn);
     int readFunWduv = digitalRead(funWduv);
@@ -37,6 +38,8 @@ void connekt(){
     client.print(readFunWduv);
     client.print("&funWYduv=");
     client.print(readFunWYduv);
+    client.print("&wifi_ip_to_string=");//*******************
+    client.print(wifi_ip_to_string);//*******************
     client.println(" HTTP/1.1");
     client.print( "Host: " );
     client.println(host);

@@ -60,14 +60,14 @@ void setup(void) {
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);
     Serial.print(".");
-    //restartMC();
+    
   }
   Serial.print("Соединение с ");
   Serial.print(ssid);
   Serial.println(" установлено");
   Serial.print("IP address: ");
   Serial.println(WiFi.localIP());
-
+  
   dhtin.begin();
   dhtout.begin();
 
