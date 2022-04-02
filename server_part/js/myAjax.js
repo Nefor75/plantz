@@ -14,6 +14,7 @@
       var funin =       data[5];
       var funwduv=      data[7];
       var funwyduv =    data[9];
+      var ipwifi =      data[10];
       
       
        document.getElementById("temp-in").innerHTML      = tempin + " &degС (Температура внутри)";
@@ -26,6 +27,7 @@
        document.getElementById("fun-in").innerHTML       = funin + " (Кулер - внутренний)";
        document.getElementById("fun-wduv").innerHTML     = funwduv + " (Кулер - вдув)";
        document.getElementById("fun-wyduv").innerHTML    = funwyduv + " (Кулер - вЫдув)";
+       document.getElementById("ip-wifi").innerHTML      = ipwifi + " (Ip_WebServer)";
 
       }
      }, 60000); //при 5000 ругается хостинг на частые запросы

@@ -9,13 +9,15 @@ if(isset($_GET["tempIn"],
          $_GET["funExtract"],
          $_GET["funIn"],
          $_GET["funWduv"],
-         $_GET["funWYduv"]
+         $_GET["funWYduv"],
+         $_GET["wifi_ip_to_string"]
         )) {
    $tempin      = $_GET["tempIn"]; 
    $tempout     = $_GET["tempOut"];
    $humidityin  = $_GET["humidityIn"]; 
    $humidityout = $_GET["humidityOut"];
    $fotolight   = $_GET["light"];
+   $ip_wifi     = $_GET["wifi_ip_to_string"];
    $releylight  = ($_GET["releyLight"]==1) ? "ON" : "OFF";
    $funextract  = ($_GET["funExtract"]==0) ? "ON" : "OFF";
    $funin       = ($_GET["funIn"]==0) ? "ON" : "OFF";
@@ -34,7 +36,7 @@ if(isset($_GET["tempIn"],
       die("Connection failed: " . $conn->connect_error);
    }
 
-   $sql = "UPDATE plants1 SET TemperatureIn=$tempin,TemperatureOut=$tempout,HumidityIn=$humidityin,HumidityOut=$humidityout,Light='$fotolight',ReleyLight='$releylight',FunExtract='$funextract',FunIn='$funin',FunWduv='$funwduv',FunWYduv='$funwyduv'";
+   $sql = "UPDATE plants1 SET TemperatureIn=$tempin,TemperatureOut=$tempout,HumidityIn=$humidityin,HumidityOut=$humidityout,Light='$fotolight',ReleyLight='$releylight',FunExtract='$funextract',FunIn='$funin',FunWduv='$funwduv',FunWYduv='$funwyduv',Ip_Wifi='$ip_wifi'";
 
   if ($conn->query($sql) == TRUE) {
       echo "New record created successfully";
