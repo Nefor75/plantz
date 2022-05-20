@@ -1,0 +1,211 @@
+<!DOCTYPE HTML>
+<!-- ORIG -->
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Plantz</title>
+
+<!-- Behavioral Meta Data -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,900,900italic,700italic,700,500italic,400italic,500,300italic,300' rel='stylesheet' type='text/css'>
+	<link href='sstyles.css' rel='stylesheet' type='text/css'>
+	
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/myAjaxx.js"></script>
+</head>
+
+<body>
+  
+<!-- HEADER -->
+
+		<!--<div class="logo"><img src="img/logo-burst.png" alt="logo platz" height="38" width="90"></div>-->
+
+							
+<!--                            	<div id="ip-wifi">ip-wifi</div>-->
+
+<!--<div>-->
+<!--  <div>-->
+    <div class="main-page">
+      <div class="body">
+        <div class="fun-wyduv-block">
+          <img
+            src="/assets/rectangle_fan_wyduv1.jpg"
+            class="rectangle_fan_wyduv"
+          />
+          <span class="fun-wyduv-text">FAN WYDUV</span>
+          <img
+            src="/assets/Line_temp_in.jpg"
+            class="line_fun_wyduv"
+          />
+          <span id="fun-wyduv" class="fun-wyduv-var">OFF</span>
+          <img
+            src="/assets/cooler_off.jpg"
+            class="fun-wyduv-img"
+          />
+        </div>
+        <div class="fan-wduv-block">
+          <img
+            src="/assets/rectangle_fan_wduv.jpg"
+            class="rectangle_fan_wduv"
+          />
+          <span class="fun_wduv_text_frame">FAN WDUV</span>
+          <img
+            src="/assets/Line_temp_in.jpg"
+            class="line_temp_in"
+          />
+          <span id="fun-wduv" class="fun_wduv_var"></span>
+          <img
+            src="/assets/cooler_off.jpg"
+            class="img_cooler_status"
+          />
+        </div>
+        <!--<script type="text/javascript" src="js/fan_wduv_status.js"></script>-->
+        <div class="fan-exist-block">
+          <img
+            src="/assets/rectangle_fan_exist.jpg"
+            class="rectangle_fan_exist_frame"
+          />
+          <span class="fan_exist_text">FAN EXIST</span>
+          <img
+            src="/assets/Line_temp_in.jpg"
+            class="line_fan_exist"
+          />
+          <span id="fun-extract" class="fun_extract_var">ON</span>
+          <img
+            src="/assets/cooler_on.jpg"
+            class="fun-extract_img"
+          />
+        </div>
+        <div class="fan-in-block">
+          <img
+            src="/assets/rectangle_fan_in.jpg"
+            class="rectangle_fan_in"
+          />
+          <span class="fun-in-text">FAN IN</span>
+          <img
+            src="/assets/Line_temp_in.jpg"
+            class="line_fun_in"
+          />
+          <span id="fun-in" class="fun-in-var">ON</span>
+          <img
+            src="/assets/cooler_on.jpg"
+            class="fun-in_img_fan"
+          />
+          <!--<img-->
+          <!--  src="/playground_assets/fanon160146-o4v9-200h.png"-->
+          <!--  alt="fanon160146"-->
+          <!--  class="main-page1097-image05"-->
+          <!--/>-->
+        </div>
+        <div class="light-foto-block">
+          <img
+            src="/assets/rectangle_light.jpg"
+            class="rectangle_light"
+          />
+          <span class="relay_light-text">RELAYLIGHT</span>
+          <span class="fotosensor-text">FOTOSENSOR</span>
+          <div id="fotosensor_img"></div>
+          <!--<script type="text/javascript" src="js/img_fotosensor.js"></script>-->
+          <img
+            src="/assets/Line_temp_in.jpg"
+            class="line_light_foto"
+          />
+          <img
+            src="/assets/lamp_on.jpg"
+            class="lamp_on-image"
+          />
+          <span id="reley-light" class="reley_light_var">ON</span>
+          <div id="light-status"></div>
+          <!--<script type="text/javascript" src="js/img_fotosensor.js"></script>-->
+        </div>
+        <div class="light_interval">
+            <span class="start_timer_light">08:00</span>
+            <img 
+              src="/assets/Line_short2.jpg"
+              class="line_light_timer"
+              />
+            <span class="stop_timer_light">14:00</span>
+          </div>
+        <div class="temp-out-block">
+          <img
+            src="/assets/rectangle_temp_out.jpg"
+            class="rectangle_temp_out"
+          />
+          <span class="temp_out-text">TEMP OUT</span>
+          <span class="humi_out_text">HUMI OUT</span>
+          <img
+            src="/assets/Line_temp_in.jpg"
+            class="line_temp_out"
+          />
+          <img
+            src="/assets/humi.jpg"
+            class="humi_out_img"
+          />
+          <img
+            src="/assets/termom.jpg"
+            class="termom_out_img"
+          />
+          <span id="temp-out" class="tempout_text">99</span>
+          <span id="humidity-out" class="humidityout_text">99</span>
+        </div>
+        <div class="date-time-block">
+          <img
+            src="/assets/rectangle_date.jpg"
+            class="rectangle_date"
+          />
+          <span id="myP" class="date-text">DATE</span>
+          <span class="time-text">TIME</span>
+          <img
+            src="/assets/Line_temp_in.jpg"
+            class="line-date-time"
+          />
+          <span id="date-current" class="date-current-text">99.99.9999</span>
+          <script type="text/javascript" src="js/current_date.js"></script>
+          <span id="time-current" class="time-current-text">99:99:99</span>
+          <script type="text/javascript" src="js/current_times.js"></script>
+        </div>
+        <div class="temp-in-block">
+          <img
+            src="/assets/rectangle_temp_in.jpg"
+            class="rectangle_temp_in"
+          />
+          <span class="tempin_text_frame">TEMP IN</span>
+          <span class="humidityin_text_frame">HUMI IN</span>
+          <img
+            src="/assets/Line_temp_in.jpg"
+            class="line_temp_in"
+          />
+          <img
+            src="/assets/humi.jpg"
+            class="humi_in-img"
+          />
+          <img
+            src="/assets/termom.jpg"
+            class="termom-image"
+          />
+          <span id="temp-in" class="tempin_text">99</span>
+          <span id="humidity-in" class="humidityin_text">99</span>
+        </div>
+      </div>
+      <div class="header">
+        <div class="constant-block">
+          <span class="constant_text">Constant =</span>
+          <span class="constant_int">26</span>
+          <span class="main-page1097-text34">*</span>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="polling">
+          <span class="interval_text">Інтервал роботи кулерів</span>
+          <span class="interval_timer">09:18</span>
+          <span class="interval_check_sens">10</span>
+        </div>
+      </div>
+    </div>
+<!--  </div>-->
+<!--</div>-->
+</body>
+    </html>
