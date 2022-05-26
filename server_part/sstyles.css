@@ -23,9 +23,71 @@
   border-color: transparent;
   background-color: rgba(0, 0, 0, 1);
 }
-.fun-wyduv-block {
+.header {
+  top: 16px;
+  left: 5px;
+  width: 1440px;
+  height: 231px;
+  display: flex;
+  padding: 10px;
+  overflow: hidden;
+  position: absolute;
+  box-sizing: border-box;
+  align-items: flex-start;
+  flex-shrink: 1;
+  border-color: rgba(255, 255, 255, 1);
+  border-style: solid;
+  border-width: 1px;
+  background-color: rgba(0, 0, 0, 1);
+}
+.constant-block {
+  top: 70px;
+  left: 539px;
+  width: 363px;
+  height: 66px;
+  display: flex;
+  position: absolute;
+  box-sizing: border-box;
+  align-items: flex-start;
+  flex-shrink: 1;
+  border-color: transparent;
+}
+.constant_text {
+  top: 10px;
+  left: 0px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 48px;
+  align-self: auto;
+  font-style: normal;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 400px;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.constant_int {
+  top: 10px;
+  left: 239px;
+  color: rgba(255, 255, 255, 1);
+  width: 83px;
+  height: auto;
+  position: absolute;
+  font-size: 48px;
+  align-self: auto;
+  font-style: normal;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 400px;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.fan-exist-block{
   top: 340px;
-  left: 1084px;
+  left: 1083px;
   width: 356px;
   height: 340px;
   display: flex;
@@ -91,19 +153,31 @@
   position: absolute;
   object-fit: cover;
   border-color: transparent;
-/*  transition: all 0.5s ease;*/
-/*  animation: rotate 0.5s linear infinite;*/
-/*}*/
-
-/*@keyframes rotate {*/
-/*  from {*/
-/*    transform: rotate(-360deg);*/
-/*  }*/
+  background-image: url(assets/cooler_off.jpg);
+  background-repeat: no-repeat;
+}
+.fun-wyduv-img-rotate {
+  top: 48px;
+  left: 125px;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  object-fit: cover;
+  border-color: transparent;
+  transition: all 0.5s ease;
+  animation: rotate 0.5s linear infinite;
+  background-image: url(assets/cooler_on.jpg);
+  background-repeat: no-repeat;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(-360deg);
+  }
 }
 
-.fan-wduv-block {
+.fan-in-block {
   top: 340px;
-  left: 724px;
+  left: 719px;
   width: 356px;
   height: 340px;
   display: flex;
@@ -137,8 +211,15 @@
   font-stretch: normal;
   text-decoration: none;
 }
-.line_temp_in {
+.line_fun_wduv {
   top: 178px;
+  left: 17px;
+  width: 314px;
+  height: 3px;
+  position: absolute;
+}
+.line_temp_in {
+  top: 173px;
   left: 17px;
   width: 314px;
   height: 3px;
@@ -161,18 +242,38 @@
   font-stretch: normal;
   text-decoration: none;
 }
-.img_cooler_status {
+.fan-wduv-img {
   top: 48px;
   left: 131px;
   width: 100px;
   height: 100px;
   position: absolute;
   object-fit: cover;
+  background-image: url(assets/cooler_off.jpg);
+  background-repeat: no-repeat;
   border-color: transparent;
 }
-.fan-exist-block {
+.fan-wduv-img-rotate {
+  top: 48px;
+  left: 131px;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  object-fit: cover;
+  background-image: url(assets/cooler_on.jpg);
+  background-repeat: no-repeat;
+  border-color: transparent;
+  animation: rotate 0.5s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(-360deg);
+  }
+}
+.fun-wyduv-block {
   top: 342px;
-  left: 364px;
+  left: 362px;
   width: 356px;
   height: 338px;
   display: flex;
@@ -237,21 +338,30 @@
   position: absolute;
   object-fit: cover;
   border-color: transparent;
-/**********Тут крутится картинка*************/
+  background-image: url(assets/cooler_off.jpg);
+  background-repeat: no-repeat;
+}
+.fun-extract_img-rotate {
+  top: 46px;
+  left: 128px;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  object-fit: cover;
+  border-color: transparent;
+  background-image: url(assets/cooler_on.jpg);
+  background-repeat: no-repeat;
   transition: all 0.5s ease;
   animation: rotate 0.5s linear infinite;
 }
-
 @keyframes rotate {
   from {
     transform: rotate(-360deg);
   }
 }
-/**********Тут крутится картинка*************/
-
-.fan-in-block {
+.fan-wduv-block {
   top: 340px;
-  left: 0px;
+  left: 2px;
   width: 360px;
   height: 340px;
   display: flex;
@@ -317,21 +427,30 @@
   position: absolute;
   object-fit: cover;
   border-color: transparent;
-  /**********Тут крутится картинка*************/
+  background-image: url(assets/cooler_off.jpg);
+  background-repeat: no-repeat;
+}
+.fun-in_img_fan-rotate {
+  top: 48px;
+  left: 133px;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  object-fit: cover;
+  border-color: transparent;
+  background-image: url(assets/cooler_on.jpg);
+  background-repeat: no-repeat;
   transition: all 0.5s ease;
   animation: rotate 0.5s linear infinite;
 }
-
 @keyframes rotate {
   from {
     transform: rotate(-360deg);
   }
 }
-/**********Тут крутится картинка*************/
-
 .light-foto-block {
   top: 1px;
-  left: 726px;
+  left: 725px;
   width: 354px;
   height: 338px;
   display: flex;
@@ -387,7 +506,7 @@
   position: absolute;
   object-fit: cover;
   border-color: transparent;
-  background-image: url(assets/fotosens_img_on.jpg);
+  background-image: url(assets/fotosens_img_off.jpg);
   background-repeat: no-repeat;
   /*visibility: hidden;*/
 }
@@ -438,20 +557,21 @@
   text-decoration: none;
 }
 .line_light_foto {
-  top: 168px;
+  top: 171px;
   left: 17px;
   width: 313px;
   height: 3px;
   position: absolute;
 }
 .lamp_on-image {
-  top: 55px;
-  left: 38px;
-  width: 85px;
-  height: 80px;
+  top: 49px;
+  left: 33px;
+  width: 100px;
+  height: 100px;
   position: absolute;
   object-fit: cover;
   border-color: transparent;
+  background-image: url(assets/lamp_off.jpg);
 }
 .reley_light_var {
   top: 68px;
@@ -489,7 +609,7 @@
 }
 .start_timer_light {
   top: 3px;
-  left: 17px;
+  left: 14px;
   color: rgba(255, 255, 255, 1);
   height: auto;
   position: absolute;
@@ -505,14 +625,14 @@
 }
 .line_light_timer {
   top: 37px;
-  left: 18px;
+  left: 16px;
   width: 125;
   height: 3;
   position: absolute;
 }
 .stop_timer_light {
   top: 45px;
-  left: 16px;
+  left: 14px;
   color: rgba(255, 255, 255, 1);
   width: 33px;
   height: auto;
@@ -527,7 +647,7 @@
   font-stretch: normal;
   text-decoration: none;
 }
-.temp-in-block {
+.temp-out-block {
   top: 1px;
   left: 4px;
   width: 360px;
@@ -629,8 +749,8 @@
   text-decoration: none;
 }
 .date-time-block {
-  top: 0px;
-  left: 364px;
+  top: 2px;
+  left: 363px;
   width: 359px;
   height: 340px;
   display: flex;
@@ -721,9 +841,9 @@
   font-stretch: normal;
   text-decoration: none;
 }
-.temp-out-block {
+.temp-in-block {
   top: 1px;
-  left: 1087px;
+  left: 1083px;
   width: 354px;
   height: 339px;
   display: flex;
@@ -798,87 +918,9 @@
   object-fit: cover;
   border-color: transparent;
 }
-.header {
-  top: 16px;
-  left: 0px;
-  width: 1440px;
-  height: 231px;
-  display: flex;
-  padding: 10px;
-  overflow: hidden;
-  position: absolute;
-  box-sizing: border-box;
-  align-items: flex-start;
-  flex-shrink: 1;
-  border-color: rgba(255, 255, 255, 1);
-  border-style: solid;
-  border-width: 1px;
-  background-color: rgba(0, 0, 0, 1);
-}
-.constant-block {
-  top: 82px;
-  left: 539px;
-  width: 363px;
-  height: 66px;
-  display: flex;
-  position: absolute;
-  box-sizing: border-box;
-  align-items: flex-start;
-  flex-shrink: 1;
-  border-color: transparent;
-}
-.constant_text {
-  top: 10px;
-  left: 0px;
-  color: rgba(255, 255, 255, 1);
-  height: auto;
-  position: absolute;
-  font-size: 48px;
-  align-self: auto;
-  font-style: normal;
-  text-align: center;
-  font-family: Roboto;
-  font-weight: 400px;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.constant_int {
-  top: 10px;
-  left: 223px;
-  color: rgba(255, 255, 255, 1);
-  width: 83px;
-  height: auto;
-  position: absolute;
-  font-size: 48px;
-  align-self: auto;
-  font-style: normal;
-  text-align: center;
-  font-family: Roboto;
-  font-weight: 400px;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.main-page1097-text34 {
-  top: 0px;
-  left: 302px;
-  color: rgba(255, 255, 255, 1);
-  height: auto;
-  position: absolute;
-  font-size: 96px;
-  align-self: auto;
-  font-style: normal;
-  text-align: center;
-  font-family: Roboto;
-  font-weight: 400px;
-  line-height: 0px;
-  font-stretch: normal;
-  text-decoration: none;
-}
 .footer {
   top: 960px;
-  left: 1.1368683772161603e-13px;
+  left: 6px;
   width: 1440px;
   height: 231px;
   display: flex;
@@ -892,65 +934,4 @@
   border-style: solid;
   border-width: 1px;
   background-color: rgba(0, 0, 0, 1);
-}
-.polling {
-  top: 51px;
-  left: 325px;
-  width: 791px;
-  height: 129px;
-  display: flex;
-  position: absolute;
-  box-sizing: border-box;
-  align-items: flex-start;
-  flex-shrink: 1;
-  border-color: transparent;
-}
-.interval_text {
-  top: 40px;
-  left: 112px;
-  color: rgba(255, 255, 255, 1);
-  height: auto;
-  position: absolute;
-  font-size: 36px;
-  align-self: auto;
-  font-style: normal;
-  text-align: center;
-  font-family: Roboto;
-  font-weight: 400px;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.interval_check_sens {
-  top: 40px;
-  left: 635px;
-  color: rgba(255, 255, 255, 1);
-  width: 83px;
-  height: auto;
-  position: absolute;
-  font-size: 36px;
-  align-self: auto;
-  font-style: normal;
-  text-align: center;
-  font-family: Roboto;
-  font-weight: 400px;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.interval_timer {
-  top: 40px;
-  left: 545px;
-  color: rgba(255, 255, 255, 1);
-  height: auto;
-  position: absolute;
-  font-size: 36px;
-  align-self: auto;
-  font-style: normal;
-  text-align: center;
-  font-family: Roboto;
-  font-weight: 400px;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
 }

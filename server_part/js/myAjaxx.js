@@ -4,61 +4,65 @@
       dataType: 'json',                      
       success: function(data){
  
-      var tempin =      data[0];
-      var tempout =     data[1];
-      var humidityin =  data[2];
-      var humidityout =   data[3];
-      var light =         data[4];
-      var releylight =    data[8];
-      var funextract =    data[6];
-      var funin =         data[5];
-      var funwduv=        data[7];
-      var funwyduv =      data[9];
-      var ipwifi =        data[10];
-      //var imgfotosensor = data[11];
+      var tempin =           data[0];
+      var tempout =          data[1];
+      var humidityin =       data[2];
+      var humidityout =      data[3];
+      var light =            data[4];
+      var releylight =       data[8];
+      var funextract =       data[6];
+      var funin =            data[5];
+      var funwduv=           data[7];
+      var funwyduv =         data[9];
+      var ipwifi =           data[10];
+      var imgfotosensor =    data[11];
+      var imgcolwduv =       data[12];
+      var imgcolwyduv =      data[13];
+      var imgcolin =         data[14];
+      var imgcolexist =      data[15];
+      var imglamp =          data[16];
+     // var consttemp =        data[17];
+      //var consttimligstart = data[18];
+      //var constTimligstop =  data[19];
+      //var constcolcheck =    data[20];
       
-    //   var block = document.getElementById('fotosensor_img');
-      
+    //   document.getElementById("constant_temp_var").innerHTML = consttemp + " &degС";
+    //   document.getElementById("start_timer_light_var").innerHTML = consttimligstart + ":00";
+    //   document.getElementById("stop_timer_light_var").innerHTML  = consttimligstop + ":00";
+    //   document.getElementById("interval_check_sens_var").innerHTML = constcolcheck + " min";
+    
+  //   *******************sensors DHT-22*************************************    
        document.getElementById("temp-in").innerHTML      = tempin + " &degС";
        document.getElementById("temp-out").innerHTML     = tempout + " &degС";
        document.getElementById("humidity-in").innerHTML  = humidityin + " %";
        document.getElementById("humidity-out").innerHTML = humidityout + " %";
-       document.getElementById("light-status").innerHTML = light;
        
-       //chimgfoto(light-status);
-       //document.getElementById('fotosensor').innerHTML = "url('/assets/fotosens_green.jpg')";
-       //while(light == 'ON')
-     //  block.style.backgroundImage = "url('/assets/fotosens_green.jpg')";
-       //if(light != 'ON')
-          //block.backgroundImage = "url('/assets/fotosens_green.jpg').innerHTML";
-          //block.style.backgroundImage= "url('/assets/fotosens_img_on.jpg').innerHTML";
-     // else 
-          // block.style.backgroundImage = "url('/assets/fotosens_img_off.jpg').innerHTML";
-    
+    //   *******************fotosensor*************************************
+       document.getElementById("light-status").innerHTML = light;
+       document.getElementById("fotosensor_img").setAttribute("style", "background-image: url('"+imgfotosensor+"');");
 
-
+    //   ***********************RELAYLIGHT**************************************
        document.getElementById("reley-light").innerHTML  = releylight;
-       document.getElementById("fun-extract").innerHTML  = funextract;
-       document.getElementById("fun-in").innerHTML       = funin;
-       document.getElementById("fun-wduv").innerHTML     = funwduv;
-       document.getElementById("fun-wyduv").innerHTML    = funwyduv;
-    //   document.getElementById("ip-wifi").innerHTML      = ipwifi + " (Ip_WebServer)";
+       document.getElementById("lamp_image").setAttribute("style", "background-image: url('"+imglamp+"');");
 
+    //   *********************funextract********************************************
+       document.getElementById("fun-extract").innerHTML  = funextract;
+       document.getElementById("img-fun-extract").setAttribute("class", imgcolexist);
+
+    //   *********************funin********************************************
+       document.getElementById("fun-in").innerHTML       = funin;
+       document.getElementById("img_cooler_in").setAttribute("class", imgcolin);
+
+    //   *********************funwduv********************************************
+       document.getElementById("fun-wduv").innerHTML     = funwduv;
+       document.getElementById("img_cooler_wduv").setAttribute("class", imgcolwduv);
+
+    //   *********************funwyduv********************************************
+       document.getElementById("fun-wyduv").innerHTML    = funwyduv;
+       document.getElementById("img_cooler_wyduv").setAttribute("class", imgcolwyduv);
+
+    // document.getElementById("ip-wifi").innerHTML      = ipwifi + " (Ip_WebServer)";
       }
      }, 60000); //при 5000 ругается хостинг на частые запросы
     });
-    
-    function chimgfoto(id){
-        var block = document.getElementById('fotosensor_img').innerHTML;
-        var e = document.getElementById(id);
-        var txt = e.textContent || e.innerText;
-        if(txt == "ON")
-        block.style.backgroundImage = "url('/assets/fotosens_img_on.jpg')";
-    }
-   
-   function chimgfans(id){
-        var block = document.getElementById('fan_vduw_on');
-        if(id == "ON")
-        block.style.backgroundImage = "url('/assets/fan_on.jpg').innerHTML";
-    }
     

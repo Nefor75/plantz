@@ -26,10 +26,11 @@
 							
 <!--                            	<div id="ip-wifi">ip-wifi</div>-->
 
-<!--<div>-->
-<!--  <div>-->
     <div class="main-page">
       <div class="body">
+          
+          ******************fun-wyduv-block******************
+          
         <div class="fun-wyduv-block">
           <img
             src="/assets/rectangle_fan_wyduv1.jpg"
@@ -41,11 +42,11 @@
             class="line_fun_wyduv"
           />
           <span id="fun-wyduv" class="fun-wyduv-var">OFF</span>
-          <img
-            src="/assets/cooler_off.jpg"
-            class="fun-wyduv-img"
-          />
+          <div  id="img_fun-wyduv" class="fun-wyduv-img"></div>
         </div>
+        
+        ******************fun-wduv-block******************
+        
         <div class="fan-wduv-block">
           <img
             src="/assets/rectangle_fan_wduv.jpg"
@@ -54,15 +55,14 @@
           <span class="fun_wduv_text_frame">FAN WDUV</span>
           <img
             src="/assets/Line_temp_in.jpg"
-            class="line_temp_in"
+            class="line_fun_wduv"
           />
           <span id="fun-wduv" class="fun_wduv_var"></span>
-          <img
-            src="/assets/cooler_off.jpg"
-            class="img_cooler_status"
-          />
+          <div  id="img_cooler_wduv" class="fan-wduv-img" ></div>
         </div>
-        <!--<script type="text/javascript" src="js/fan_wduv_status.js"></script>-->
+        
+        *************************fan-exist-block******************************
+        
         <div class="fan-exist-block">
           <img
             src="/assets/rectangle_fan_exist.jpg"
@@ -74,11 +74,11 @@
             class="line_fan_exist"
           />
           <span id="fun-extract" class="fun_extract_var">ON</span>
-          <img
-            src="/assets/cooler_on.jpg"
-            class="fun-extract_img"
-          />
+          <div  id="img-fun-extract" class="fun-extract_img"></div>
         </div>
+        
+        *************************fan-in-block******************************
+        
         <div class="fan-in-block">
           <img
             src="/assets/rectangle_fan_in.jpg"
@@ -90,16 +90,11 @@
             class="line_fun_in"
           />
           <span id="fun-in" class="fun-in-var">ON</span>
-          <img
-            src="/assets/cooler_on.jpg"
-            class="fun-in_img_fan"
-          />
-          <!--<img-->
-          <!--  src="/playground_assets/fanon160146-o4v9-200h.png"-->
-          <!--  alt="fanon160146"-->
-          <!--  class="main-page1097-image05"-->
-          <!--/>-->
+          <div  id="img_cooler_in" class="fun-in_img_fan"></div>
         </div>
+        
+        ******************light-foto-block*********************
+        
         <div class="light-foto-block">
           <img
             src="/assets/rectangle_light.jpg"
@@ -108,27 +103,26 @@
           <span class="relay_light-text">RELAYLIGHT</span>
           <span class="fotosensor-text">FOTOSENSOR</span>
           <div id="fotosensor_img"></div>
-          <!--<script type="text/javascript" src="js/img_fotosensor.js"></script>-->
           <img
             src="/assets/Line_temp_in.jpg"
             class="line_light_foto"
           />
-          <img
-            src="/assets/lamp_on.jpg"
-            class="lamp_on-image"
-          />
-          <span id="reley-light" class="reley_light_var">ON</span>
+          <div id="lamp_image" class="lamp_on-image"></div>
+          <div id="reley-light" class="reley_light_var"></div>
           <div id="light-status"></div>
-          <!--<script type="text/javascript" src="js/img_fotosensor.js"></script>-->
         </div>
+
         <div class="light_interval">
-            <span class="start_timer_light">08:00</span>
+            <span id="start_timer_light_var" class="start_timer_light">08:00</span>
             <img 
               src="/assets/Line_short2.jpg"
               class="line_light_timer"
               />
-            <span class="stop_timer_light">14:00</span>
+            <span id="stop_timer_light_var" class="stop_timer_light">14:00</span>
           </div>
+          
+         ***********************temp-out-block********************* 
+          
         <div class="temp-out-block">
           <img
             src="/assets/rectangle_temp_out.jpg"
@@ -151,6 +145,9 @@
           <span id="temp-out" class="tempout_text">99</span>
           <span id="humidity-out" class="humidityout_text">99</span>
         </div>
+        
+        ***********************date-time-block*************************
+        
         <div class="date-time-block">
           <img
             src="/assets/rectangle_date.jpg"
@@ -167,6 +164,9 @@
           <span id="time-current" class="time-current-text">99:99:99</span>
           <script type="text/javascript" src="js/current_times.js"></script>
         </div>
+        
+        ***************************temp-in-block************************
+        
         <div class="temp-in-block">
           <img
             src="/assets/rectangle_temp_in.jpg"
@@ -190,22 +190,20 @@
           <span id="humidity-in" class="humidityin_text">99</span>
         </div>
       </div>
+      
+     ****************************header********************************* 
+      
       <div class="header">
         <div class="constant-block">
           <span class="constant_text">Constant =</span>
-          <span class="constant_int">26</span>
-          <span class="main-page1097-text34">*</span>
+          <span id="constant_temp_var" class="constant_int"> 26&#176;C</span>
         </div>
       </div>
-      <div class="footer">
-        <div class="polling">
-          <span class="interval_text">Інтервал роботи кулерів</span>
-          <span class="interval_timer">09:18</span>
-          <span class="interval_check_sens">10</span>
+      
+      *****************************footer**************************************
+
+      <div class="footer" >
         </div>
-      </div>
     </div>
-<!--  </div>-->
-<!--</div>-->
 </body>
     </html>
