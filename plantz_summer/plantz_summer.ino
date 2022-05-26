@@ -82,10 +82,9 @@ void setup(void) {
   pinMode(releyLight, OUTPUT);
   tempFun();
 
-
   delay(100);
  
-server.on("/", webpage);
+  server.on("/", webpage);
   server.begin();
    /*
   //+++++++++++++++++++++++ START  funExtract ++++++++++++++++++++

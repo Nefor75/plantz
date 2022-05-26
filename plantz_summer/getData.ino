@@ -12,6 +12,11 @@ void connekt(){
     int readFunWYduv = digitalRead(funWYduv);
     int readReleyLight = digitalRead(releyLight);
 
+    int constTemp = 26;
+    int constTimLigStart = 14;
+    int constTimLigStop = 8;
+    int constColCheck = 10;
+
   if (!client.connect(host, port)) {
     Serial.println("Нет соединения с хостом");
     delay(2000);
@@ -40,6 +45,14 @@ void connekt(){
     client.print(readFunWYduv);
     client.print("&wifi_ip_to_string=");
     client.print(wifi_ip_to_string);
+//    client.print("&constTemp=");
+//    client.print(constTemp);
+//    client.print("&constTimLigStart=");
+//    client.print(constTimLigStart);
+//    client.print("&constTimLigStop=");
+//    client.print(constTimLigStop);
+//    client.print("&constColCheck=");
+//    client.print(constColCheck);
     client.println(" HTTP/1.1");
     client.print( "Host: " );
     client.println(host);

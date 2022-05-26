@@ -4,5 +4,4 @@ Serial.println("AUTO MODE");
   getTimerLight(8,14);
   coolerCheck(10);
   connekt();
-
 }
