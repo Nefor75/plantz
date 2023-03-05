@@ -21,6 +21,8 @@
       var imgcolin =         data[14];
       var imgcolexist =      data[15];
       var imglamp =          data[16];
+      var releyheater =      data[17];
+      var imgheater =        data[18];
      // var consttemp =        data[17];
       //var consttimligstart = data[18];
       //var constTimligstop =  data[19];
@@ -41,9 +43,13 @@
        document.getElementById("light-status").innerHTML = light;
        document.getElementById("fotosensor_img").setAttribute("style", "background-image: url('"+imgfotosensor+"');");
 
-    //   ***********************RELAYLIGHT**************************************
+    //   ***********************RELEYLIGHT**************************************
        document.getElementById("reley-light").innerHTML  = releylight;
        document.getElementById("lamp_image").setAttribute("style", "background-image: url('"+imglamp+"');");
+       
+    //   *********************heater********************************************
+       document.getElementById("heater").innerHTML  = releyheater;
+       document.getElementById("img_heater").setAttribute("class", imgheater);
 
     //   *********************funextract********************************************
        document.getElementById("fun-extract").innerHTML  = funextract;
@@ -56,10 +62,10 @@
     //   *********************funwduv********************************************
        document.getElementById("fun-wduv").innerHTML     = funwduv;
        document.getElementById("img_cooler_wduv").setAttribute("class", imgcolwduv);
-
+//alert(imgcolwyduv);
     //   *********************funwyduv********************************************
        document.getElementById("fun-wyduv").innerHTML    = funwyduv;
-       document.getElementById("img_cooler_wyduv").setAttribute("class", imgcolwyduv);
+       document.getElementById("img_fun-wyduv").setAttribute("class", imgcolwyduv);
 
     // document.getElementById("ip-wifi").innerHTML      = ipwifi + " (Ip_WebServer)";
       }
