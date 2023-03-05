@@ -1,6 +1,7 @@
 WiFiUDP ntpUDP;
-const long utcOffsetInSeconds = 10800;//летнее время
-//const long utcOffsetInSeconds = 7200;//зимнее время
+//const long utcOffsetInSeconds = 10800;//летнее время
+const long utcOffsetInSeconds = 7200;//зимнее время
+
 NTPClient timeClient(ntpUDP, "pool.ntp.org", utcOffsetInSeconds);
 
 
@@ -25,6 +26,7 @@ void getTimerLight(int time_off, int time_on){
     Serial.print(hour_off);
     Serial.print(" До ");
     Serial.println(hour_on);
+   // WiFi.disconnect();//поможет ли от зависания разъединение с wifi или все же ESP.restart????????? 
   }else{
     digitalWrite(releyLight, HIGH);
     Serial.print("Свет Горит т.к текущее время: ");

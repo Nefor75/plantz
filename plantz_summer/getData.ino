@@ -11,11 +11,12 @@ void connekt(){
     int readFunWduv = digitalRead(funWduv);
     int readFunWYduv = digitalRead(funWYduv);
     int readReleyLight = digitalRead(releyLight);
+    int readReleyHeater = digitalRead(releyHeater);
 
     int constTemp = 26;
-    int constTimLigStart = 14;
-    int constTimLigStop = 8;
-    int constColCheck = 10;
+//    int constTimLigStart = 14;
+//    int constTimLigStop = 8;
+//    int constColCheck = 10;
 
   if (!client.connect(host, port)) {
     Serial.println("Нет соединения с хостом");
@@ -45,6 +46,8 @@ void connekt(){
     client.print(readFunWYduv);
     client.print("&wifi_ip_to_string=");
     client.print(wifi_ip_to_string);
+    client.print("&releyHeater=");
+    client.print(readReleyHeater);
 //    client.print("&constTemp=");
 //    client.print(constTemp);
 //    client.print("&constTimLigStart=");

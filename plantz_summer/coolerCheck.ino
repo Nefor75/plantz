@@ -39,26 +39,22 @@ void tempFun(){
       int readFunWduv = digitalRead(funWduv); 
       int readFunWYduv = digitalRead(funWYduv);
    
-     //   digitalWrite(funExtract, LOW);//кулер включен т.к. контакты ненормально разомкнуты
-     // Serial.println();
       Serial.print("Вытяжной кулер ВКЛ ");      
       Serial.println(readFunExtract); 
-      Serial.print("Внутренний кулер ВКЛ ");
-       // digitalWrite(funIn, LOW);
+      Serial.print("Внутренний кулер ВКЛ ");   
       Serial.println(readFunIn); 
       Serial.println();
-      
-      digitalWrite(funWduv, HIGH);
-      digitalWrite(funWYduv, HIGH);
-      delay(7000);//ждем 7 сек пока остановится кулер вдув или выдув
-      
+           
        if (tempin < CONSTTEMP && tempin > tempout){  
         digitalWrite(funWduv, HIGH);
         digitalWrite(funWYduv, HIGH);
       Serial.println("funWduv ВЫКЛ ");     
       Serial.print("funWYduv ВЫКЛ ");    
       Serial.println();
-      Serial.println("Внутри температура ниже константы, а снаружи холодно, поэтому кулеры не работают(нагреваем бокс)");//1
+      Serial.println("releyHeater ВКЛ ");
+      digitalWrite(releyHeater, HIGH);
+      Serial.println("Внутри температура ниже константы, а снаружи холодно, поэтому кулеры не работают, работает обогреватель");//1
+      
   }
       else if (tempin < CONSTTEMP && tempin < tempout){  
         digitalWrite(funWduv, LOW);
@@ -66,6 +62,8 @@ void tempFun(){
       Serial.println("funWduv ВКЛ ");
       Serial.print("funWYduv ВЫКЛ ");
       Serial.println();
+      Serial.println("releyHeater ВКЛ ");
+      digitalWrite(releyHeater, HIGH);//обогреватель работает т.к может быть вариант бесконечный на улице +10 в боксе +5
       Serial.println("Внутри температура ниже константы, а снаружи тепло, поэтому с улицы гонит воздух");//2   
   } 
       else if (tempin < CONSTTEMP && tempin == tempout){  
@@ -74,7 +72,9 @@ void tempFun(){
       Serial.println("funWduv ВЫКЛ ");
       Serial.print("funWYduv ВЫКЛ ");
       Serial.println();
-      Serial.println("Внутри температура ниже константы, а снаружи равна с внутри, поэтому кулеры не работают(нагреваем бокс)");//3
+      Serial.println("releyHeater ВКЛ ");
+      digitalWrite(releyHeater, HIGH);
+      Serial.println("Внутри температура ниже константы, а снаружи равна с внутри, поэтому кулеры не работают,работает обогреватель");//3
   } 
       else if (tempin == CONSTTEMP){  
         digitalWrite(funWduv, HIGH);
@@ -82,7 +82,9 @@ void tempFun(){
       Serial.println("funWduv ВЫКЛ ");
       Serial.print("funWYduv ВЫКЛ ");
       Serial.println();
-      Serial.println("Внутри температура равна константе, поэтому кулеры не работают");//4
+      digitalWrite(releyHeater, LOW);
+      Serial.println("releyHeater ВЫКЛ ");
+      Serial.println("Внутри температура равна константе, поэтому кулеры и обогреватель не работают");//4
  }
  else if (tempin > CONSTTEMP && tempin > tempout){  
         digitalWrite(funWduv, LOW);
@@ -90,6 +92,8 @@ void tempFun(){
       Serial.println("funWduv ВКЛ ");
       Serial.print("funWYduv ВЫКЛ ");
       Serial.println();
+      digitalWrite(releyHeater, LOW);
+      Serial.println("releyHeater ВЫКЛ ");
       Serial.println("В боксе жарко, а снаружи холодно, поэтому кулер работает на вдув");//5
   }
   else if (tempin > CONSTTEMP && tempin == tempout){  
@@ -98,6 +102,8 @@ void tempFun(){
       Serial.println("funWduv ВЫКЛ ");
       Serial.print("funWYduv ВКЛ ");
       Serial.println();
+      digitalWrite(releyHeater, LOW);
+      Serial.println("releyHeater ВЫКЛ ");
       Serial.println("В боксе жарко, и снаружи жарко, поэтому кулер работает на выдув");//6
   }
   else if (tempin > CONSTTEMP && tempin < tempout){  
@@ -106,6 +112,8 @@ void tempFun(){
       Serial.println("funWduv ВЫКЛ ");
       Serial.print("funWYduv ВКЛ ");
       Serial.println();
+      digitalWrite(releyHeater, LOW);
+      Serial.println("releyHeater ВЫКЛ ");
       Serial.println("В боксе жарко, и снаружи жарко, поэтому кулер работает на выдув");//7
   }
 }

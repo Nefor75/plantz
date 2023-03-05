@@ -6,5 +6,5 @@ void manualMode(){
   pinMode(funWduv, OUTPUT);
   pinMode(funWYduv, OUTPUT);
   pinMode(releyLight, OUTPUT);
- 
+  pinMode(releyHeater, OUTPUT);
 }

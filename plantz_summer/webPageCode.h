@@ -28,7 +28,7 @@ R"=====(
 
     <h1>
         Plantz Webpage <br> (HTML + CSS + JavaScript) <br><br>
-        <a href="#" id="btn" ONCLICK='JS1()'>JS</a> <br><br>
+        <a href="#" id="btn" ONCLICK='JS1()'>JS1-</a> <br><br>
         <a href="#" id="btn" ONCLICK='JS2()'>JS2</a> <br><br>
         <a href="#" id="btn" ONCLICK='ESP.restart()'>JS3</a>
     </h1>
