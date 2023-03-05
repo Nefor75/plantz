@@ -10,44 +10,37 @@ if(isset($_GET["tempIn"],
          $_GET["funIn"],
          $_GET["funWduv"],
          $_GET["funWYduv"],
-         $_GET["wifi_ip_to_string"]
-        //  $_GET["constTemp"],
-        //  $_GET["constTimLigStart"],
-        //  $_GET["constTimLigStop"],
-        //  $_GET["constColCheck"]
+         $_GET["wifi_ip_to_string"],
+         $_GET["releyHeater"]
         )) {
-    //   $consttemp = $_GET["constTemp"];
-    //   $consttimligstart = $_GET["constTimLigStart"];
-    //   $constTimligstop  = $_GET["constTimLigStop"];
-    //   $constcolcheck  = $_GET["constColCheck"];
-
+    
    $tempin      = $_GET["tempIn"]; 
    $tempout     = $_GET["tempOut"];
    $humidityin  = $_GET["humidityIn"]; 
    $humidityout = $_GET["humidityOut"];
    
    //***********************  fotosens**********************
-   $fotolight   = "";
+   $fotolight = "";
    $url_img_foto = "";
-   $temp_foto_img  = $_GET["light"];
+   $temp_foto_img = $_GET["light"];
    if($temp_foto_img == "ON"){
-       $fotolight   = "ON";
+       $fotolight = "ON";
        $url_img_foto = "assets/fotosens_img_on.jpg";
    }else {
-       $fotolight   = "OFF";
+       $fotolight = "OFF";
        $url_img_foto = "assets/fotosens_img_off.jpg";
    }
   
    //***********************releylight**********************
    //$releylight  = ($_GET["releyLight"]==1) ? "ON" : "OFF";
    $url_img_light = "";
-   $releylight  = "";
+   $releylight = "";
    $temp_img_light = $_GET["releyLight"];
    if($temp_img_light == 1){
-       $releylight  = "ON";
+       $releylight = "ON";
        $url_img_light = "assets/lamp_on.jpg";
     }else{
-           $releylight  = "OFF";
+           $releylight = "OFF";
        $url_img_light = "assets/lamp_off.jpg";
         }
        
@@ -76,7 +69,7 @@ if(isset($_GET["tempIn"],
       }
    
  //***********************  funWduv**********************
-   $url_img_coller_wduv = "fan-wduv-img";
+   $url_img_coller_wduv = "";
    $temp_funWduv = $_GET["funWduv"];
    $funwduv = "";
       if($temp_funWduv == 0){
@@ -99,7 +92,19 @@ if(isset($_GET["tempIn"],
           $url_img_coller_wyduv = "fun-wyduv-img";
       }
 
-   $ip_wifi     = $_GET["wifi_ip_to_string"];
+//***********************releyHeater**********************
+   $url_img_heater = "";
+   $releyheater = "";
+   $temp_img_heater = $_GET["releyHeater"];
+   if($temp_img_heater == 1){
+       $releyheater = "ON";
+       $url_img_heater = "heater_img_rotate";
+     }else{
+           $releyheater = "OFF";
+       $url_img_heater = "heater_img";
+         }
+
+   $ip_wifi = $_GET["wifi_ip_to_string"];
 
    $servername = "intui2.mysql.ukraine.com.ua";
    $username = "intui2_app";
@@ -113,7 +118,7 @@ if(isset($_GET["tempIn"],
       die("Connection failed: " . $conn->connect_error);
    }
 
-   $sql = "UPDATE plants1 SET TemperatureIn=$tempin,TemperatureOut=$tempout,HumidityIn=$humidityin,HumidityOut=$humidityout,Light='$fotolight',ReleyLight='$releylight',FunExtract='$funextract',FunIn='$funin',FunWduv='$funwduv',FunWYduv='$funwyduv',Ip_Wifi='$ip_wifi',UrlFotosensor='$url_img_foto',UrlImgColWduv='$url_img_coller_wduv',UrlImgColWyduv='$url_img_coller_wyduv',UrlImgColIn='$url_img_coller_in',UrlImgColExtract='$url_img_coller_funextract',UrlLightImg='$url_img_light'";
+   $sql = "UPDATE plants1 SET TemperatureIn=$tempin,TemperatureOut=$tempout,HumidityIn=$humidityin,HumidityOut=$humidityout,Light='$fotolight',ReleyLight='$releylight',FunExtract='$funextract',FunIn='$funin',FunWduv='$funwduv',FunWYduv='$funwyduv',Ip_Wifi='$ip_wifi',UrlFotosensor='$url_img_foto',UrlImgColWduv='$url_img_coller_wduv',UrlImgColWyduv='$url_img_coller_wyduv',UrlImgColIn='$url_img_coller_in',UrlImgColExtract='$url_img_coller_funextract',UrlLightImg='$url_img_light',ReleyHeater='$releyheater',UrlHeaterImg='$url_img_heater'";
 //   ConstTemp=$consttemp,ConstTimLigStart=$consttimligstart,ConstTimLigStop=$consttimligstop,ConstColCheck=$constcolcheck";
 
   if ($conn->query($sql) == TRUE) {

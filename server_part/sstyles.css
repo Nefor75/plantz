@@ -1,6 +1,6 @@
 .main-page {
   width: 1452px;
-  height: 1200px;
+  height: 1600px;
   display: flex;
   overflow: hidden;
   position: relative;
@@ -14,7 +14,8 @@
   top: 261px;
   left: 0px;
   width: 1440px;
-  height: 1024px;
+  /*height: 1024px;*/
+  height: 1400px;
   display: flex;
   overflow: hidden;
   position: absolute;
@@ -84,18 +85,6 @@
   line-height: normal;
   font-stretch: normal;
   text-decoration: none;
-}
-.fan-exist-block{
-  top: 340px;
-  left: 1083px;
-  width: 356px;
-  height: 340px;
-  display: flex;
-  position: absolute;
-  box-sizing: border-box;
-  align-items: flex-start;
-  flex-shrink: 1;
-  border-color: transparent;
 }
 .rectangle_fan_wyduv {
   top: 17px;
@@ -187,6 +176,18 @@
   flex-shrink: 1;
   border-color: transparent;
 }
+.heater-block {
+  top: 680px;
+  left: 540px;
+  width: 356px;
+  height: 340px;
+  display: flex;
+  position: absolute;
+  box-sizing: border-box;
+  align-items: flex-start;
+  flex-shrink: 1;
+  border-color: transparent;
+}
 .rectangle_fan_wduv {
   top: 17px;
   left: 0px;
@@ -265,15 +266,9 @@
   border-color: transparent;
   animation: rotate 0.5s linear infinite;
 }
-
-@keyframes rotate {
-  from {
-    transform: rotate(-360deg);
-  }
-}
 .fun-wyduv-block {
   top: 342px;
-  left: 362px;
+  left: 363px;
   width: 356px;
   height: 338px;
   display: flex;
@@ -289,6 +284,18 @@
   width: 356;
   height: 323;
   position: absolute;
+}
+.fan-exist-block{
+  top: 340px;
+  left: 1083px;
+  width: 356px;
+  height: 340px;
+  display: flex;
+  position: absolute;
+  box-sizing: border-box;
+  align-items: flex-start;
+  flex-shrink: 1;
+  border-color: transparent;
 }
 .fan_exist_text {
   top: 1px;
@@ -395,6 +402,23 @@
   font-stretch: normal;
   text-decoration: none;
 }
+.heater-text {
+  top: 5px;
+  left: 10px;
+  color: rgba(255, 255, 255, 1);
+  width: 75px;
+  height: auto;
+  position: absolute;
+  font-size: 24px;
+  align-self: auto;
+  font-style: normal;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 400px;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
 .line_fun_in {
   top: 180px;
   left: 20px;
@@ -403,6 +427,23 @@
   position: absolute;
 }
 .fun-in-var {
+  top: 234px;
+  left: 120px;
+  color: rgba(255, 255, 255, 1);
+  width: 126px;
+  height: auto;
+  position: absolute;
+  font-size: 48px;
+  align-self: auto;
+  font-style: normal;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 400px;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.heater-var {
   top: 234px;
   left: 120px;
   color: rgba(255, 255, 255, 1);
@@ -429,6 +470,35 @@
   border-color: transparent;
   background-image: url(assets/cooler_off.jpg);
   background-repeat: no-repeat;
+}
+.heater_img {
+  top: 48px;
+  left: 133px;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  object-fit: cover;
+  border-color: transparent;
+  background-image: url(assets/cooler_off.jpg);
+  background-repeat: no-repeat;
+}
+.heater_img_rotate {
+  top: 48px;
+  left: 133px;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  object-fit: cover;
+  border-color: transparent;
+  background-image: url(assets/heater_on.jpg);
+  background-repeat: no-repeat;
+  transition: all 0.5s ease;
+  animation: rotate 0.5s linear infinite;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(-360deg);
+  }
 }
 .fun-in_img_fan-rotate {
   top: 48px;
@@ -919,7 +989,7 @@
   border-color: transparent;
 }
 .footer {
-  top: 960px;
+  top: 1300px;
   left: 6px;
   width: 1440px;
   height: 231px;
@@ -935,3 +1005,40 @@
   border-width: 1px;
   background-color: rgba(0, 0, 0, 1);
 }
+/*<!--**********************blink*************************-->*/
+#circle{
+    height:4rem;
+    width:4rem;
+    
+    border-radius: 4rem;
+    
+     opacity: 0.0;
+
+    -webkit-animation: pulsate 1000ms ease-out;
+    -webkit-animation-iteration-count: infinite; 
+        
+    -webkit-transition: background-color 300ms linear;
+    -moz-transition: background-color 300ms linear;
+    -o-transition: background-color 300ms linear;
+    -ms-transition: background-color 300ms linear;
+    transition: background-color 300ms linear;
+}
+
+@-webkit-keyframes pulsate {
+     0% {opacity: 0.0;} 
+     10% {opacity: 0.1;}
+     20% {opacity: 0.2;}
+     30% {opacity: 0.3;}  
+     40% {opacity: 0.4;} 
+     50% {opacity: 0.5;}
+     60% {opacity: 0.6;}
+     70% {opacity: 0.7;} 
+     80% {opacity: 0.8;}
+     90% {opacity: 0.9;} 
+     100% {opacity: 1.0;}
+}
+
+ .online{
+    background:green;
+} 
+

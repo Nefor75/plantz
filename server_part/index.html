@@ -93,6 +93,22 @@
           <div  id="img_cooler_in" class="fun-in_img_fan"></div>
         </div>
         
+        <!--*************************heater-block******************************-->
+        
+        <div class="heater-block">
+          <img
+            src="/assets/rectangle_fan_in.jpg"
+            class="rectangle_fan_in"
+          />
+          <span class="heater-text">HEATER</span>
+          <img
+            src="/assets/Line_temp_in.jpg"
+            class="line_fun_in"
+          />
+          <span id="heater" class="heater-var">ON</span>
+          <div  id="img_heater" class="heater_img"></div>
+        </div>
+        
         ******************light-foto-block*********************
         
         <div class="light-foto-block">
@@ -113,12 +129,12 @@
         </div>
 
         <div class="light_interval">
-            <span id="start_timer_light_var" class="start_timer_light">08:00</span>
+            <span id="start_timer_light_var" class="start_timer_light">07:00</span>
             <img 
               src="/assets/Line_short2.jpg"
               class="line_light_timer"
               />
-            <span id="stop_timer_light_var" class="stop_timer_light">14:00</span>
+            <span id="stop_timer_light_var" class="stop_timer_light">13:00</span>
           </div>
           
          ***********************temp-out-block********************* 
@@ -137,10 +153,12 @@
           <img
             src="/assets/humi.jpg"
             class="humi_out_img"
+            id="humi_out_img"
           />
           <img
             src="/assets/termom.jpg"
             class="termom_out_img"
+            id="termom_out_img"
           />
           <span id="temp-out" class="tempout_text">99</span>
           <span id="humidity-out" class="humidityout_text">99</span>
@@ -181,10 +199,12 @@
           <img
             src="/assets/humi.jpg"
             class="humi_in-img"
+            id="humi_in_img"
           />
           <img
             src="/assets/termom.jpg"
             class="termom-image"
+            id="termom_in_img"
           />
           <span id="temp-in" class="tempin_text">99</span>
           <span id="humidity-in" class="humidityin_text">99</span>
@@ -203,6 +223,10 @@
       *****************************footer**************************************
 
       <div class="footer" >
+          <!--**********************blink*************************-->
+           <!--<div id="circle" class="online"></div>-->
+        
+    <!--*****************************blink******************************-->
         </div>
     </div>
 </body>
